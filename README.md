@@ -8,4 +8,4 @@ Use snapcraft to create the snap. After that we can test by doing:
 $ snap install pulseaudio
 $ snap install --dangerous pacat-simple_1_amd64.snap
 $ snap connect pacat-simple:home :home
-$ sudo pacat-simple /root/<file.wav>
+$ sudo pacat-simple /var/snap/pacat-simple/current/<file.wav>

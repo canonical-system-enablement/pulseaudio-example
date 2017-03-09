@@ -1,0 +1,27 @@
+name: pacat-simple
+version: '1'
+summary: Snap to test pulseaudio in Core
+description: |
+  Snap to test pulseaudio in Core
+
+grade: stable
+confinement: strict
+
+apps:
+  pacat-simple:
+    command: bin/client-wrapper usr/bin/pacat-simple
+    plugs:
+      - pulseaudio
+      - home
+
+parts:
+  pacat-simple-common:
+    plugin: dump
+    source: overlay
+
+  pacat-simple:
+    plugin: cmake
+    source: src
+    build-packages:
+      - build-essential
+      - libpulse-dev
