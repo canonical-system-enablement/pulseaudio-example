@@ -1,4 +1,4 @@
-name: pacat-simple
+name: pulseaudio-example
 version: '1'
 summary: Snap to test pulseaudio in Core
 description: |
@@ -8,18 +8,18 @@ grade: stable
 confinement: strict
 
 apps:
-  pacat-simple:
-    command: bin/client-wrapper usr/bin/pacat-simple
+  pulseaudio-example:
+    command: bin/client-wrapper usr/bin/pulseaudio-example
     plugs:
       - pulseaudio
       - home
 
 parts:
-  pacat-simple-common:
+  pulseaudio-example-common:
     plugin: dump
     source: overlay
 
-  pacat-simple:
+  pulseaudio-example:
     plugin: cmake
     source: src
     build-packages:

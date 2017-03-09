@@ -22,9 +22,9 @@ pkg_check_modules (PC_PULSE_AUDIO_SIMPLE REQUIRED libpulse-simple)
 include_directories (${PC_PULSE_AUDIO_INCLUDE_DIRS}
                      ${PC_PULSE_AUDIO_SIMPLE_INCLUDE_DIRS})
 
-add_executable (pacat-simple pacat-simple.c)
-target_link_libraries (pacat-simple
+add_executable (pulseaudio-example pacat-simple.c)
+target_link_libraries (pulseaudio-example
                        ${PC_PULSE_AUDIO_LIBRARIES}
                        ${PC_PULSE_AUDIO_SIMPLE_LIBRARIES})
 
-install (TARGETS pacat-simple DESTINATION /usr/bin)
+install (TARGETS pulseaudio-example DESTINATION /usr/bin)
