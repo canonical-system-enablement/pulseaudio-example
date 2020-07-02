@@ -3,7 +3,7 @@ version: '1'
 summary: Snap to test pulseaudio in Core
 description: |
   Snap to test pulseaudio in Core
-
+base: core18
 grade: stable
 confinement: strict
 
@@ -11,7 +11,7 @@ apps:
   pulseaudio-example:
     command: bin/client-wrapper usr/bin/pulseaudio-example
     plugs:
-      - pulseaudio
+      - audio-playback
       - home
 
 parts:
